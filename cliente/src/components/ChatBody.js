@@ -13,9 +13,9 @@ const ChatBody = ({ messages, lastMessageRef, typingStatus }) => {
     return (
         <>
             <header className="chat__mainHeader">
-                <p>Hangout with Colleagues</p>
+                <p>Compartir con Amigos</p>
                 <button className="leaveChat__btn" onClick={handleLeaveChat}>
-                    LEAVE CHAT
+                    DEJAR LA CHARLA
                 </button>
             </header>
 
@@ -23,7 +23,7 @@ const ChatBody = ({ messages, lastMessageRef, typingStatus }) => {
                 {messages.map((message) =>
                     message.name === localStorage.getItem('userName') ? (
                         <div className="message__chats" key={message.id}>
-                            <p className="sender__name">You</p>
+                            <p className="sender__name">Tú</p>
                             <div className="message__sender">
                                 <p>{message.text}</p>
                             </div>
