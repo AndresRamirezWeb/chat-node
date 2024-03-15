@@ -20,7 +20,7 @@ const ChatBody = ({ messages, lastMessageRef, typingStatus }) => {
             </header>
 
             <div className="message__container">
-                {messages.map((message) =>
+                {messages.map(message => (
                     message.name === localStorage.getItem('userName') ? (
                         <div className="message__chats" key={message.id}>
                             <p className="sender__name">Tú</p>
@@ -36,7 +36,7 @@ const ChatBody = ({ messages, lastMessageRef, typingStatus }) => {
                             </div>
                         </div>
                     )
-                )}
+                ))}
 
                 <div className="message__status">
                     <p>{typingStatus}</p>

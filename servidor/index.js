@@ -1,13 +1,19 @@
 //index.js
 const express = require('express');
 const app = express();
-const PORT = 3000;
-const http = require('http').Server(app);
 const cors = require('cors');
+const http = require('http').Server(app);
+const PORT = 4000;
+
+// const socketIO = require('socket.io')(http, {
+//     cors: {
+//         origin: "http://localhost:3001"
+//     }
+// });
 
 const socketIO = require('socket.io')(http, {
     cors: {
-        origin: "http://localhost:3000"
+        origin: "http://192.168.1.8:3001"
     }
 });
 
@@ -36,7 +42,6 @@ socketIO.on('connection', (socket) => {
         console.log('🔥: A user disconnected');
         //Updates the list of users when a user disconnects from the server
         users = users.filter((user) => user.socketID !== socket.id);
-        // console.log(users);
         //Sends the list of users to the client
         socketIO.emit('newUserResponse', users);
         socket.disconnect();
@@ -49,6 +54,6 @@ app.get('/api', (req, res) => {
     });
 });
 
-app.listen(PORT, () => {
+http.listen(PORT, () => {
     console.log(`Server listening on ${PORT}`);
 });

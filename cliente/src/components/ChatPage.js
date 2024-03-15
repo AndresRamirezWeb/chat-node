@@ -9,7 +9,7 @@ const ChatPage = ({ socket }) => {
     const lastMessageRef = useRef(null);
 
     useEffect(() => {
-        socket.on('messageResponse', (data) => setMessages([...messages, data]));
+        socket.on('messageResponse', (data) => setMessages([...messages, data]))
     }, [socket, messages]);
 
     useEffect(() => {
@@ -18,7 +18,7 @@ const ChatPage = ({ socket }) => {
     }, [messages]);
 
     useEffect(() => {
-        socket.on('typingResponse', (data) => setTypingStatus(data));
+        socket.on('typingResponse', (data) => setTypingStatus(data))
     }, [socket]);
 
     return (
