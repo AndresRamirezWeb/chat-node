@@ -9,9 +9,9 @@ const ChatBar = ({ socket }) => {
 
     return (
         <div className="chat__sidebar">
-            <h2>Conversación abierta</h2>
-            <div>
-                <h4 className="chat__header">USUARIOS ACTIVOS</h4>
+            <h2>Chat Público</h2>
+            <div className='chat__boox'>
+                <h4 className="chat__header">Usuarios Conectados</h4>
                 <div className="chat__users">
                     {users.map(user => <p key={user.socketID}>{user.userName}</p>)}
                 </div>

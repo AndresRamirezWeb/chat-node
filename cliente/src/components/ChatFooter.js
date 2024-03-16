@@ -4,7 +4,7 @@ const ChatFooter = ({ socket }) => {
     const [message, setMessage] = useState('');
 
     const handleTyping = () =>
-        socket.emit('typing', `${localStorage.getItem('userName')} is typing`);
+        socket.emit('typing', `${localStorage.getItem('userName')} is typing...`);
 
     const handleSendMessage = (e) => {
         e.preventDefault();
@@ -23,7 +23,7 @@ const ChatFooter = ({ socket }) => {
             <form className="form" onSubmit={handleSendMessage}>
                 <input
                     type="text"
-                    placeholder="Escribe un mensaje"
+                    placeholder="Escribe un mensaje..."
                     className="message"
                     value={message}
                     onChange={(e) => setMessage(e.target.value)}

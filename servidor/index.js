@@ -5,17 +5,17 @@ const cors = require('cors');
 const http = require('http').Server(app);
 const PORT = 4000;
 
-// const socketIO = require('socket.io')(http, {
-//     cors: {
-//         origin: "http://localhost:3001"
-//     }
-// });
-
 const socketIO = require('socket.io')(http, {
     cors: {
-        origin: "http://192.168.1.8:3001"
+        origin: "http://localhost:3000"
     }
 });
+
+// const socketIO = require('socket.io')(http, {
+//     cors: {
+//         origin: "http://192.168.1.8:3001"
+//     }
+// });
 
 app.use(cors());
 let users = [];

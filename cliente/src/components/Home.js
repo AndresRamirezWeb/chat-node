@@ -15,10 +15,12 @@ const Home = ({ socket }) => {
 
     return (
         <form className="home__container" onSubmit={handleSubmit}>
-            <h2 className="home__header">Inicia sesión para abrir el chat</h2>
-            <label htmlFor="username">Usuario</label>
+            <h1 className="home__title">Bienvenido ​😎​</h1>
+            <p className="home__header">Establece un alias para usar el chat</p>
+            <label htmlFor="username">Alias</label>
             <input
                 type="text"
+                placeholder='Ingresa un alias...'
                 minLength={6}
                 name="username"
                 id="username"
@@ -26,7 +28,7 @@ const Home = ({ socket }) => {
                 value={userName}
                 onChange={(e) => setUserName(e.target.value)}
             />
-            <button className="home__cta">Ingresar</button>
+            <button className="home__cta">Iniciar</button>
         </form>
     );
 };
