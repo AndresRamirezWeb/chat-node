@@ -4,12 +4,17 @@ import ChatBody from './ChatBody';
 import ChatFooter from './ChatFooter';
 
 const ChatPage = ({ socket }) => {
-    const [messages, setMessages] = useState([]);
+    const [messages, setMessages] = useState(JSON.parse(localStorage.getItem('chatMessages')) || []);
+
     const [typingStatus, setTypingStatus] = useState('');
     const lastMessageRef = useRef(null);
 
     useEffect(() => {
-        socket.on('messageResponse', (data) => setMessages([...messages, data]))
+        socket.on('messageResponse', (data) => {
+            const newMessages = [...messages, data];
+            setMessages(newMessages);
+            localStorage.setItem('chatMessages', JSON.stringify(newMessages));
+        });
     }, [socket, messages]);
 
     useEffect(() => {

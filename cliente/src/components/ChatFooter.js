@@ -18,6 +18,7 @@ const ChatFooter = ({ socket }) => {
         }
         setMessage('');
     };
+
     return (
         <div className="chat__footer">
             <form className="form" onSubmit={handleSendMessage}>

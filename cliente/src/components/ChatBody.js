@@ -1,13 +1,17 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 const ChatBody = ({ messages, lastMessageRef, typingStatus }) => {
+
     const navigate = useNavigate();
+
     const handleLeaveChat = () => {
         localStorage.removeItem('userName');
+        localStorage.removeItem('chatMessages');
+        localStorage.removeItem('chatUsers');
         navigate('/');
         window.location.reload();
-    };
+    }
 
     return (
         <>
@@ -25,6 +29,7 @@ const ChatBody = ({ messages, lastMessageRef, typingStatus }) => {
                             <p className="sender__name">Tú</p>
                             <div className="message__sender">
                                 <p>{message.text}</p>
+                                <p className="message__timestamp">{message.timestamp}</p>
                             </div>
                         </div>
                     ) : (
@@ -32,6 +37,7 @@ const ChatBody = ({ messages, lastMessageRef, typingStatus }) => {
                             <p>{message.name}</p>
                             <div className="message__recipient">
                                 <p>{message.text}</p>
+                                <p className="message__timestamp">{message.timestamp}</p>
                             </div>
                         </div>
                     )

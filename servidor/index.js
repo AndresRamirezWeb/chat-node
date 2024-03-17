@@ -24,7 +24,13 @@ socketIO.on('connection', (socket) => {
     console.log(`⚡: ${socket.id} user just connected!`);
 
     socket.on('message', (data) => {
-        socketIO.emit('messageResponse', data);
+        const timestamp = new Date().toLocaleString();
+        const message = {
+            ...data,
+            timestamp
+        };
+
+        socketIO.emit('messageResponse', message);
     });
 
     socket.on('typing', (data) => socket.broadcast.emit('typingResponse', data));

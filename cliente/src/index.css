@@ -192,3 +192,9 @@
   font-size: 13px;
   font-style: italic;
 }
+
+.message__timestamp{
+  font-size: 10px;
+  font-style: italic;
+  color: #607eaa;
+}
