@@ -17,6 +17,18 @@ const ChatPage = ({ socket }) => {
         });
     }, [socket, messages]);
 
+    //Inicio Almacenar en archivo JSON o en base de datos
+    // useEffect(() => {
+    //     function fetchMessages() {
+    //         fetch("http://localhost:4000/api")
+    //             .then(response => response.json())
+    //             .then(data => setMessages(data.messages))
+    //             .catch(error => console.error(error));
+    //     }
+    //     fetchMessages()
+    // }, []);
+    //Fin Almacenar en archivo JSON o en base de datos
+
     useEffect(() => {
         // 👇️ scroll to bottom every time messages change
         lastMessageRef.current?.scrollIntoView({ behavior: 'smooth' });

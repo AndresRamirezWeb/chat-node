@@ -1,0 +1,85 @@
+{
+  "messages": [
+    {
+      "text": "Hello!",
+      "name": "nevodavid",
+      "id": "abcd01"
+    },
+    {
+      "text": "Welcome to my chat application!💃🏻",
+      "name": "nevodavid",
+      "id": "defg02"
+    },
+    {
+      "text": "You can start chatting!📲",
+      "name": "nevodavid",
+      "id": "hijk03"
+    },
+    {
+      "text": "Hola",
+      "name": "Andres Ramirez",
+      "id": "PzWFW4fTi2_TLVoSAAAD0.9464495714663965",
+      "socketID": "PzWFW4fTi2_TLVoSAAAD"
+    },
+    {
+      "text": "Holla",
+      "name": "Maria Helena",
+      "id": "EG4zL7rInmnNcAXfAAAH0.17510447832708098",
+      "socketID": "EG4zL7rInmnNcAXfAAAH"
+    },
+    {
+      "text": "Como vas",
+      "name": "Andres Ramirez",
+      "id": "e_KtqlyU87Sv26TIAAAD0.5897724797260422",
+      "socketID": "e_KtqlyU87Sv26TIAAAD"
+    },
+    {
+      "text": "bien y tu",
+      "name": "Maria Helena",
+      "id": "535j66pg372yi3TyAAAC0.8235060432711556",
+      "socketID": "535j66pg372yi3TyAAAC"
+    },
+    {
+      "text": "excelente",
+      "name": "Andres Ramirez",
+      "id": "y1kKxlGV8LbgB3HqAAAF0.1866328801852195",
+      "socketID": "y1kKxlGV8LbgB3HqAAAF"
+    },
+    {
+      "text": "exceñemte",
+      "name": "Maria Helena",
+      "id": "-3__gqB2aZCvlO_YAAAC0.03483469102845804",
+      "socketID": "-3__gqB2aZCvlO_YAAAC"
+    },
+    {
+      "text": "Welcome to my chat application!💃🏻",
+      "name": "Andres Ramirez",
+      "id": "Pxe7eYH8bkvfBBTHAAAD0.5565108913041472",
+      "socketID": "Pxe7eYH8bkvfBBTHAAAD"
+    },
+    {
+      "text": "Ok esta bien",
+      "name": "Andres Ramirez",
+      "id": "rORGUC4x2eRzGv37AAAF0.1737222898894336",
+      "socketID": "rORGUC4x2eRzGv37AAAF"
+    },
+    {
+      "text": "Como asi",
+      "name": "Maria Helena",
+      "id": "wOCmhHav7Jcc8EoOAAAB0.11964257524658639",
+      "socketID": "wOCmhHav7Jcc8EoOAAAB"
+    },
+    {
+      "text": "Hello",
+      "name": "Andres Ramirez",
+      "id": "qjNlD-9L7XcA-_vRAAAB0.6930102315844127",
+      "socketID": "qjNlD-9L7XcA-_vRAAAB"
+    },
+    {
+      "text": "como",
+      "name": "Eliana Ramirez",
+      "id": "6MRu2mRYTHtVKnuHAAAB0.15783936984828006",
+      "socketID": "6MRu2mRYTHtVKnuHAAAB"
+    }
+  ]
+}

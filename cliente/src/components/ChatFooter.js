@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
+import checkPageStatus from '../utils/functions';
 
 const ChatFooter = ({ socket }) => {
-    const [message, setMessage] = useState('');
 
+    const [message, setMessage] = useState('');
     const handleTyping = () =>
         socket.emit('typing', `${localStorage.getItem('userName')} is typing...`);
 
@@ -19,6 +20,8 @@ const ChatFooter = ({ socket }) => {
         setMessage('');
     };
 
+    checkPageStatus(message, socket.id);
+
     return (
         <div className="chat__footer">
             <form className="form" onSubmit={handleSendMessage}>
@@ -28,7 +31,6 @@ const ChatFooter = ({ socket }) => {
                     className="message"
                     value={message}
                     onChange={(e) => setMessage(e.target.value)}
-                    /*OnKeyDown function*/
                     onKeyDown={handleTyping}
                 />
                 <button className="sendBtn">ENVIAR</button>

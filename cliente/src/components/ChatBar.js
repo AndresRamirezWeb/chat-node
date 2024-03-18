@@ -10,8 +10,6 @@ const ChatBar = ({ socket }) => {
         });
     }, [socket, users]);
 
-
-
     return (
         <div className="chat__sidebar">
             <h2>Chat Público</h2>
